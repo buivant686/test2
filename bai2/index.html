@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Tuan Store</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">TuanStore</a>
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Tim kiem o day...">
+            </div>
+            <div class="header-action">
+                <a href="#" class="header-icon"><i class="fas fa-heart"></i></a>
+                <a href="#" class="header-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-conunt" id="cartCount">0</span>
+                </a>
+                <button class="user-btn">Dang Nhap</button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h1> Sản phẩm nổi bật</h1>
+        <div class="products-grid" id="productsGrid">
+            <!-- SP 1 -->
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+
+            <!-- SP 2 -->
+
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+            <!-- SP 3 -->
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+
+            <!-- SP 4 -->
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+
+            <!-- SP 5 -->
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+
+            <!-- SP 6 -->
+
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+            <!-- SP 7 -->
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+
+            <!-- SP 8 -->
+            <div class="products-card" data-id="1" data-name="Iphone 16 promaxx" data-price="320000">
+                <img class="product-image"
+                    src="https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg"
+                    alt="#">
+                <div class="product-info">
+                    <h3 class="product-name">Iphone 16 Promax</h3>
+                    <div class="products-price">32.99.99999</div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(this)">Mua</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast">Đã thêm vào giỏ hàng!</div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>TuanStore</h3>
+                <p>Cửa hàng công nghệ uy tín hàng đầu Việt Nam</p>
+                <p>Hotline: 1900 1234</p>
+                <p>Email: buivant686@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Theo dõi chúng tôi</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">© 2026 TuanStore. All rights reserved.</div>
+    </footer>
+    </footer>
+</body>
+
+</html>
