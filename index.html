@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu Bài Tập</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #0f0f11;
+      color: #e5e5e7;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      color: #a5b4fc;          
+    }
+
+    .btn {
+      display: block;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: white;
+      background: #1e1e24;
+      border: 1px solid #333;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      background: #2a2a35;
+      border-color: #6366f1;    /* indigo */
+      transform: translateY(-2px);
+    }
+
+    .btn:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2rem; }
+      .btn { font-size: 1.05rem; padding: 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <a href="./bai2/index.html">toi la bai 2</a>
-    <a href="./bai1/index.html">toi la bai1 </a>
+
+  <div class="container">
+    <h1>Bài Tập</h1>
+
+    <a href="./bai2/index.html" class="btn">Bài 2 →</a>
+    <a href="./bai1/index.html" class="btn">Bài 1 →</a>
+  </div>
+
 </body>
 </html>
