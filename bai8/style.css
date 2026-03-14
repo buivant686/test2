@@ -78,7 +78,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-bg);
+  background-color: #bab5ae;
   color: var(--color-black);
   font-size: 14px;
   line-height: 1.6;
