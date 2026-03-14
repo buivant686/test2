@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUNE — Modern Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==============================
+       HEADER
+  ============================== -->
+  <header class="header">
+    <div class="header__container">
+
+      <!-- Logo -->
+      <a href="#" class="header__logo">LUNE</a>
+
+      <!-- Search bar -->
+      <div class="header__search">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" id="searchInput" class="search-input" placeholder="Search products..." />
+      </div>
+
+      <!-- Cart button -->
+      <button class="cart-button" id="cartButton" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ==============================
+       HERO BANNER
+  ============================== -->
+  <section class="hero">
+    <div class="hero__content">
+      <span class="hero__tag">New Season</span>
+      <h1 class="hero__title">Designed for<br/>Everyday Life</h1>
+      <p class="hero__subtitle">Curated objects. Thoughtful design. Built to last.</p>
+      <a href="#products" class="hero__cta">Shop Now</a>
+    </div>
+    <div class="hero__image-wrap">
+      <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=900&q=80" alt="Hero product" class="hero__image" />
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       CATEGORY PILLS
+  ============================== -->
+  <section class="categories" id="products">
+    <div class="categories__container">
+      <button class="category-pill active" data-category="all">All</button>
+      <button class="category-pill" data-category="Kitchen">Kitchen</button>
+      <button class="category-pill" data-category="Home">Home</button>
+      <button class="category-pill" data-category="Accessories">Accessories</button>
+      <button class="category-pill" data-category="Stationery">Stationery</button>
+      <button class="category-pill" data-category="Lighting">Lighting</button>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       TOOLBAR (Filter + Sort)
+  ============================== -->
+  <section class="toolbar">
+    <div class="toolbar__container">
+
+      <!-- Price range filter -->
+      <div class="toolbar__filter">
+        <label for="priceRange" class="toolbar__label">Max Price</label>
+        <div class="toolbar__range-row">
+          <input type="range" id="priceRange" min="0" max="500" value="500" step="10" />
+          <span class="toolbar__price-display" id="priceDisplay">$500</span>
+        </div>
+      </div>
+
+      <!-- Sort dropdown -->
+      <div class="toolbar__sort">
+        <label for="sortSelect" class="toolbar__label">Sort by</label>
+        <select id="sortSelect" class="toolbar__select">
+          <option value="default">Featured</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="name-asc">Name: A → Z</option>
+        </select>
+      </div>
+
+      <!-- Result count -->
+      <p class="toolbar__count" id="productCount">12 products</p>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       PRODUCT GRID
+  ============================== -->
+  <main class="product-section">
+    <ul class="product-grid" id="productGrid"></ul>
+
+    <!-- Empty state message -->
+    <div class="empty-state" id="emptyState" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <p>No products found. Try adjusting your filters.</p>
+    </div>
+  </main>
+
+
+  <!-- ==============================
+       CART SIDEBAR
+  ============================== -->
+  <!-- Dark overlay when cart opens -->
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="cart-sidebar" id="cartSidebar" hidden>
+
+    <div class="cart-sidebar__header">
+      <h2>Your Cart</h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Cart items list -->
+    <ul class="cart-items" id="cartItems"></ul>
+
+    <!-- Cart footer: total + checkout -->
+    <div class="cart-sidebar__footer">
+      <div class="cart-summary">
+        <span class="cart-summary__label">Subtotal</span>
+        <span class="cart-summary__total" id="cartTotal">$0</span>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+      <button class="btn-clear" id="clearCartBtn">Remove All Items</button>
+    </div>
+
+  </aside>
+
+
+  <!-- ==============================
+       TOAST NOTIFICATION
+  ============================== -->
+  <div class="toast" id="toast"></div>
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__brand">LUNE</p>
+      <p class="footer__copy">© 2026 LUNE Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- JS files loaded in correct order -->
+  <script src="script/data.js"></script>
+  <script src="script/cart.js"></script>
+  <script src="script/filter.js"></script>
+  <script src="script/render.js"></script>
+  <script src="script/main.js"></script>
+
+</body>
+</html> 

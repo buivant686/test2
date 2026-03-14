@@ -1,0 +1,74 @@
+body{
+    background-image:url(/bai4/CB.png) ;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* căn ngang */
+    align-items: center;      /* căn dọc */
+    font-family: Arial, sans-serif;
+}
+#openBtn{
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    transition: all 0.5s ease;
+}
+#openBtn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+
+}
+#openBtn:active{
+    transform: scale(0.95);
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.modal{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.8);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width:300px;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.modal.active{
+text-align: center;
+ display: block;
+ opacity: 1;
+ transform: translate(-50,-50) scale(1);
+
+}
+.overlay.active{
+    display: block;
+}
+.close-btn{
+    position:absolute;
+    top:10px;
+    right: 15px;
+    border:none;
+    background: none;
+    font-size:20px;
+    cursor: pointer;
+}

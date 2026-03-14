@@ -1,0 +1,111 @@
+
+* {
+    box-sizing: border-box;
+  }
+  body{
+    background-image: url(https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-00001062023/2101_01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.form-container{
+    background: white;
+    padding:35px;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2); ;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-group{
+    margin-bottom: 18px;
+}
+input{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    border-radius: 8px;
+    border: 1px solid rgb(104, 213, 179);
+    transition: 0.3s;
+}
+input:focus{
+    border-color: #667eea;
+    font-size: 12px;
+    height: 30px;
+
+}
+button{
+    width: 100%;
+    padding:12px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    transform:  translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);;
+}
+button:disabled{
+    background: gray;
+    cursor: not-allowed;
+}
+.toggle{
+    font-size:13px ;
+    color: #667eea;
+    cursor: pointer;
+    margin-top:5px;
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.overlay.show{
+    opacity: 1;
+    visibility: visible;
+}
+.popup
+{
+    background: white;
+    width: 320px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transform: scale(0.7);
+    transition: 0.3 ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);;
+}
+.overlay.show .popup{
+    transform: scale(1);
+
+}
+.success-icon {
+    font-size: 70px;
+    color: #28c76f;
+    margin-bottom: 15px;
+  }
+  
+  .popup button {
+    margin-top: 15px;
+  }

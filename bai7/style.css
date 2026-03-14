@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Inter',sans-serif;
+    background:  linear-gradient(to right, #18A5A7, #BFFFC7);
+    padding: 40px;
+}
+.container{
+    max-width: 700px;
+    margin: auto;
+}
+.subtitle{
+    color: linear-gradient(135deg, #FF3E9D, #4A00E0);
+    margin-bottom: 20px;
+}
+.search-row{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+input{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+button{
+    padding: 10px 16px;
+    border: none;
+    background: linear-gradient(135deg, #40E0D0, #3CB371, #228B22);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background: #333;
+}
+/* Modal */
+.modal{
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    
+}
+.modal-content{
+    background: rgb(227, 208, 208);
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+}
+.close{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.modal-info{
+    margin: 10px;
+    line-height: 1.6;
+
+}
+.message{
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+}
+#userList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.user-card{
+    background: rgb(231, 236, 221);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #eee;
+
+}
+.avatar{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#eee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+.info{
+    flex:1;
+}
+.meta{
+    font-size:13px;
+    color:#666;
+}
+.details-btn{
+    background:#0077ff;
+ }
+.details-btn:hover{
+    background:#005fd1;
+}
+    

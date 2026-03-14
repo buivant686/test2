@@ -1,0 +1,133 @@
+/**
+ * js/data.js
+ * ──────────────────────────────────────────────────
+ * Product catalogue — the raw data for the store.
+ * This file only contains data, no logic at all.
+ * ──────────────────────────────────────────────────
+ */
+
+const PRODUCTS = [
+  {
+    id: 1,
+    name: "Linen Tote Bag",
+    category: "Accessories",
+    price: 48,
+    rating: 4,
+    reviews: 38,
+    description: "Undyed Belgian linen with leather handles. Market-perfect.",
+    image: "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=600&q=80",
+  },
+  {
+    id: 2,
+    name: "Ceramic Pour-Over",
+    category: "Kitchen",
+    price: 72,
+    rating: 5,
+    reviews: 61,
+    description: "Single-hole dripper for a slow, intentional morning ritual.",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+  },
+  {
+    id: 3,
+    name: "Merino Wool Throw",
+    category: "Home",
+    price: 155,
+    rating: 5,
+    reviews: 29,
+    description: "Extra-fine 18.5 micron merino. Soft, warm, timeless.",
+    image: "https://images.unsplash.com/photo-1580301762395-21ce84d00bc6?w=600&q=80",
+  },
+  {
+    id: 4,
+    name: "Oak Cutting Board",
+    category: "Kitchen",
+    price: 89,
+    rating: 4,
+    reviews: 45,
+    description: "End-grain red oak, oiled with beeswax. Heirloom quality.",
+    image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600&q=80",
+  },
+  {
+    id: 5,
+    name: "Brass Desk Lamp",
+    category: "Lighting",
+    price: 210,
+    rating: 4,
+    reviews: 17,
+    description: "Articulating arm, warm Edison bulb included. Made to last.",
+    image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80",
+  },
+  {
+    id: 6,
+    name: "Leather Journal",
+    category: "Stationery",
+    price: 62,
+    rating: 5,
+    reviews: 53,
+    description: "Full-grain vegetable-tanned leather, A5, 192 pages.",
+    image: "https://images.unsplash.com/photo-1544816565-aa8c1166648f?w=600&q=80",
+  },
+  {
+    id: 7,
+    name: "Stoneware Mug",
+    category: "Kitchen",
+    price: 34,
+    rating: 4,
+    reviews: 92,
+    description: "Hand-thrown, kiln-fired. Holds 300ml — just enough.",
+    image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&q=80",
+  },
+  {
+    id: 8,
+    name: "Beeswax Candle Set",
+    category: "Accessories",
+    price: 28,
+    rating: 4,
+    reviews: 74,
+    description: "Pure beeswax tapers, 100% cotton wick, 8-hour burn.",
+    image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 9,
+    name: "Walnut Serving Tray",
+    category: "Home",
+    price: 95,
+    rating: 5,
+    reviews: 21,
+    description: "Solid walnut, hand-rubbed oil finish. Everyday elegance.",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
+  },
+  {
+    id: 10,
+    name: "Cashmere Beanie",
+    category: "Accessories",
+    price: 118,
+    rating: 4,
+    reviews: 33,
+    description: "Grade-A Mongolian cashmere. Slouchy, warm, understated.",
+    image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&q=80",
+  },
+  {
+    id: 11,
+    name: "Recycled Glass Vase",
+    category: "Home",
+    price: 44,
+    rating: 4,
+    reviews: 19,
+    description: "Mouth-blown recycled glass. No two are identical.",
+    image: "https://images.unsplash.com/photo-1567225557594-88d73e55f2cb?w=600&q=80",
+  },
+  {
+    id: 12,
+    name: "Bamboo Desk Organiser",
+    category: "Stationery",
+    price: 56,
+    rating: 3,
+    reviews: 40,
+    description: "Moso bamboo, modular compartments. Clear the clutter.",
+    image: "https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=600&q=80",
+  },
+];
+
+// Highest price in catalogue — used to set the slider max value
+const MAX_PRICE = Math.max(...PRODUCTS.map((p) => p.price));

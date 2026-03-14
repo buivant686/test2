@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+</head>
+<body>
+    
+
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Đăng Ký Tài Khoản Thành Côngg</h3>
+            <p>Khuyến mãi sẽ được cộng vào tài khoản của bạn trong vòng 24h.</p>
+            <button id="closePopup">Đóng</button>
+        </div>
+    </div>
+
+
+    <div class="form-container">
+        <h2>Đăng Ký Tài Khoản</h2>
+        <form id="registerForm">
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="text" id="email">
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password">
+                <div class="error" id="passwordError"></div>
+                <div class="toggle" id="togglePassword">Show Password</div>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword">
+                <div class="error" id="confirmError"></div>
+            </div>
+            
+            <button type="submit" id="submitBtn" disabled>Dang Ky</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
